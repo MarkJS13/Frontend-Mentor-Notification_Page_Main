@@ -1,0 +1,279 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+
+}
+
+p, h1,h2,h3,h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding: 40px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.container {
+    
+    background-color: var(--very-light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.notification-container {
+    background-color: var(--white);
+    padding: 20px 30px;
+    border-radius: 15px;
+    width: 763px;
+    margin: 50px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+}
+
+header .notification {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+header .notification h1 {
+    font-weight: 600;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+header .notification h2 {
+    padding: 2px 14px;
+    font-size: 21px;
+    background-color: var(--blue);
+    color: var(--light-grayish-blue-1);
+    border-radius: 8px;
+}
+
+.mark-as-read p {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--grayish-blue);
+}
+
+.mark-as-read p:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.tiles {
+    display: grid;
+    gap: 15px;
+}
+
+.notif-tiles {
+    display: flex;
+    gap: 15px;
+    padding: 13px 25px;
+    background-color: var(--very-light-grayish-blue);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.notif-tiles img {
+    height: 55px;
+    width: 55px;
+}
+
+.notif-tiles .info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.notif-tiles .info .info-text h3{
+    font-weight: 900;
+    font-size: 18px;
+    color: black;
+}
+
+.notif-tiles .info .info-text h3:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.notif-tiles .info .info-text h3 .span1{
+    color: var(--grayish-blue);
+    font-weight: 600;
+}
+
+.notif-tiles .info .info-text h3 .span2{
+    color: var(--dark-grayish-blue);
+
+}
+
+.notif-tiles .info .info-text h3 .span2:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.notif-tiles .info .info-time p{
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--grayish-blue);
+}
+
+.div1 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.div1 .notif-box {
+    padding: 20px ;
+    background-color: var(--light-grayish-blue-1);
+    border-radius: 8px;
+}
+
+.div1 .notif-box p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-grayish-blue);
+}
+
+.rizky {
+    background-color: unset;
+    
+}
+
+.divk1 {
+    display: flex;
+    gap: 15px;
+}
+
+.kim-chess {
+    display: flex;
+    justify-content: space-between;
+}
+
+.red-dot {
+    width: 10px; 
+    height: 10px; 
+    background-color: var(--red); 
+    border-radius: 50%; 
+    display: inline-block; 
+    margin-left: 4px;
+}
+
+.visited-notif {
+    background-color: var(--white) !important;
+}
+
+.tiles .notif-tiles .img, .tiles .notif-tiles .info, .div1, .divk1, .kim-img {
+    pointer-events: none;
+}
+
+
+@media screen and (max-width: 760px) {
+    
+    .notification-container {
+        width: 100%;
+        margin: auto 30px;
+        padding: 18px;
+    }
+
+    header {
+        padding: 20px 0;
+        padding-bottom: 30px;
+    }
+    
+    header .notification {
+        gap: 12px;
+    }
+    
+    header .notification h1 {
+        font-size: clamp(0.875rem, 0.25rem + 2vw, 1.375rem);
+    }
+    
+    header .notification h2 {
+        font-size: clamp(0.75rem, 0.5156rem + 0.75vw, 0.9375rem);
+    }
+
+    .mark-as-read p {
+        font-size: clamp(0.75rem, 0.3594rem + 1.25vw, 1.0625rem);
+    }
+
+
+    /*****/
+
+    .notif-tiles {
+        display: flex;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    
+    
+    .notif-tiles img {
+        height: 45px;
+        width: 45px;
+    }
+    
+    .notif-tiles .info{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .notif-tiles .info .info-text h3{
+        font-size: clamp(0.8125rem, 0.4219rem + 1.25vw, 1.125rem);
+    }
+    
+    
+    .notif-tiles .info .info-time p{
+        font-size: clamp(0.8125rem, 0.5rem + 1vw, 1.0625rem);
+    }
+
+    .div1 .notif-box p {
+        font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+    }
+
+    .red-dot {
+        width: 5px; 
+        height: 5px; 
+        background-color: var(--red); 
+        border-radius: 50%; 
+        display: inline-block; 
+        margin-left: 4px;
+    }
+}
