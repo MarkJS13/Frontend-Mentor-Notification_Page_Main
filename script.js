@@ -1,6 +1,7 @@
 const notifications = document.querySelectorAll('.notif-tiles');
 const notifCount = document.querySelector('header .notification h2');
 const markAsRead = document.querySelector('header .mark-as-read');
+//const redDot = document.querySelectorAll('.red-dot');
 
 
 
